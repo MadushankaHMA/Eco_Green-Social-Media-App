@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Eco Green</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="posts">Posts</string>
+    <string name="add_description">Add description</string>
+    <string name="eco_green">Eco Green</string>
+
+</resources>

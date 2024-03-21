@@ -18,5 +18,10 @@ a platform for responsible waste disposal, encouraging sustainable behavior thro
 and repurposing collected items into new products, the Eco Green application contributes to 
 environmental sustainability and addresses the challenges of non-disposable waste.
 
-## SLIIT FINAL YEAR RESEARCH
+### OUR TEAM
+
+## Madushanka H.M.A - IT20610616
+## Gunasekara L.B.K  - IT20606688
+## S.M.W.K Samarasinghe - IT20604608
+## Maleesha K.A.D.M - IT20609276
 

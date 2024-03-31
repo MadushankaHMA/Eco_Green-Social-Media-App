@@ -6,4 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".PostActivity">
 
+<!--
+    look for button sizes
+-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

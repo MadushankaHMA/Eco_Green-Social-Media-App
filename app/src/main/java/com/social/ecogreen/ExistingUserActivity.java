@@ -1,4 +1,4 @@
-package com.social.ecogreen.utils;
+package com.social.ecogreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,3 +14,5 @@ public class ExistingUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_existing_user);
     }
 }
+
+//comment to commit

@@ -51,7 +51,7 @@ public class Notification extends Fragment {
 
         loadNotification();
     }
-
+    //notification update
     void init(View view) {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

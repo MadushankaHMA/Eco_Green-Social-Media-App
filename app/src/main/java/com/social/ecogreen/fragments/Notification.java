@@ -51,7 +51,7 @@ public class Notification extends Fragment {
 
         loadNotification();
     }
-
+    //notification update
     void init(View view) {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -68,7 +68,7 @@ public class Notification extends Fragment {
     void loadNotification() {
 
         CollectionReference reference = FirebaseFirestore.getInstance().collection("Notifications");
-
+        //get notification using UID and time
         reference.whereEqualTo("uid", user.getUid())
                 .orderBy("time", Query.Direction.DESCENDING)
                 .addSnapshotListener((value, error) -> {

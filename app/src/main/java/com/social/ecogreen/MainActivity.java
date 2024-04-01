@@ -231,4 +231,6 @@ public class MainActivity extends AppCompatActivity implements Search.OnDataPass
     }
 //check comment
 
+    //configuration - Mayumi
+
 }

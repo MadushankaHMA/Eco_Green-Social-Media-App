@@ -57,4 +57,9 @@ public class PostViewActivity extends AppCompatActivity {
         }else
             startActivity(new Intent(PostViewActivity.this, ReplacerActivity.class));
     }
+
+/*
+    divide post as selling post and normal post
+*/
+
 }

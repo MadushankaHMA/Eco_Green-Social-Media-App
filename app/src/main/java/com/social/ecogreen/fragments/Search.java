@@ -128,6 +128,7 @@ public class Search extends Fragment {
 
     }
 
+    //Search by user ID
     private void loadUserData() {
 
         reference.addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -160,6 +161,7 @@ public class Search extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        //Add array list
         list = new ArrayList<>();
         adapter = new UserAdapter(list);
         recyclerView.setAdapter(adapter);

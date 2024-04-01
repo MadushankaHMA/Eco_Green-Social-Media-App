@@ -68,7 +68,7 @@ public class Notification extends Fragment {
     void loadNotification() {
 
         CollectionReference reference = FirebaseFirestore.getInstance().collection("Notifications");
-
+        //get notification using UID and time
         reference.whereEqualTo("uid", user.getUid())
                 .orderBy("time", Query.Direction.DESCENDING)
                 .addSnapshotListener((value, error) -> {

@@ -12,4 +12,8 @@ public class RecommendationViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recommendation_view);
     }
 
+/*
+    have two seperate tabs for friends reco and bids reco
+*/
+
 }

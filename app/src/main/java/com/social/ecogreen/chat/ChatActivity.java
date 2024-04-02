@@ -155,7 +155,7 @@ public class ChatActivity extends AppCompatActivity {
 
         chatID = getIntent().getStringExtra("id");
 
-
+        //Create firebase connection
         CollectionReference reference = FirebaseFirestore.getInstance()
                 .collection("Messages")
                 .document(chatID)

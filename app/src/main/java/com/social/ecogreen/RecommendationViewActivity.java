@@ -15,5 +15,8 @@ public class RecommendationViewActivity extends AppCompatActivity {
 /*
     have two seperate tabs for friends reco and bids reco
 */
+/*
+    display friends as a list with their usernames
+*/
 
 }

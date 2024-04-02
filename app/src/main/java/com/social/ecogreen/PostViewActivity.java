@@ -60,6 +60,11 @@ public class PostViewActivity extends AppCompatActivity {
 
 /*
     divide post as selling post and normal post
+
+*/
+
+/*
+    look how to handle models
 */
 
 }

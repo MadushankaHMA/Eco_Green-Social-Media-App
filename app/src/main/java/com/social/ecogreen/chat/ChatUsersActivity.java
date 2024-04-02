@@ -58,7 +58,7 @@ public class ChatUsersActivity extends AppCompatActivity {
 
 
     void fetchUserData() {
-
+        //error handle
         CollectionReference reference = FirebaseFirestore.getInstance().collection("Messages");
         reference.whereArrayContains("uid", user.getUid())
                 .addSnapshotListener((value, error) -> {

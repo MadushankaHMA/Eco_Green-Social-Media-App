@@ -67,7 +67,7 @@ public class ChatActivity extends AppCompatActivity {
 
 
             Map<String, Object> map = new HashMap<>();
-
+            //track last massage
             map.put("lastMessage", message);
             map.put("time", FieldValue.serverTimestamp());
 
@@ -155,7 +155,7 @@ public class ChatActivity extends AppCompatActivity {
 
         chatID = getIntent().getStringExtra("id");
 
-
+        //Create firebase connection
         CollectionReference reference = FirebaseFirestore.getInstance()
                 .collection("Messages")
                 .document(chatID)

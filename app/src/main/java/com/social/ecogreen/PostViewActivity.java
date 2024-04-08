@@ -64,7 +64,7 @@ public class PostViewActivity extends AppCompatActivity {
 */
 
 /*
-    look how to handle models
+    look how to handle model's output
 */
 
 }

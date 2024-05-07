@@ -4,7 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
     <application
@@ -16,32 +17,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.social.ecogreen.chat.ChatActivity"
+            android:name=".chat.ChatActivity"
             android:exported="true" />
         <activity
-            android:name="com.social.ecogreen.chat.ChatUsersActivity"
+            android:name=".chat.ChatUsersActivity"
             android:exported="true" />
         <activity
-            android:name="com.social.ecogreen.ViewStoryActivity"
+            android:name=".ViewStoryActivity"
             android:exported="true" />
-        <activity android:name="com.social.ecogreen.StoryAddActivity" />
-        <activity
-            android:name="com.social.ecogreen.PostViewActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+        <activity android:name=".StoryAddActivity" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="firebasestorage.googleapis.com"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
-        <activity android:name="com.social.ecogreen.ReplacerActivity" />
+        <activity android:name=".ReplacerActivity" />
         <activity
-            android:name="com.social.ecogreen.SplashActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.social.ecogreen.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

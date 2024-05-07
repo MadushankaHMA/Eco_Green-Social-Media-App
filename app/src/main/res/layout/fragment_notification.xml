@@ -5,9 +5,49 @@
     android:layout_height="match_parent"
     tools:context="com.social.ecogreen.fragments.Notification">
 
-   <androidx.recyclerview.widget.RecyclerView
+   <TextView
+       android:id="@+id/notificationsTopic"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="10dp"
+       android:text="Notifications and Suggestions"
+       android:textSize="18sp"
+       android:textStyle="bold" />
+
+   <LinearLayout
+       android:id="@+id/buttonLayout"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:id="@+id/recyclerView"/>
+       android:layout_below="@id/notificationsTopic"
+       android:layout_marginTop="10dp"
+       android:orientation="horizontal"
+       android:weightSum="2">
+
+         <Button
+             android:id="@+id/friendRecommendationsButton"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_marginStart="5dp"
+             android:layout_marginEnd="5dp"
+             android:text="Friend Recommendations" />
+
+         <Button
+             android:id="@+id/postRecommendationsButton"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_marginStart="5dp"
+             android:layout_marginEnd="5dp"
+             android:text="Post Recommendations" />
+   </LinearLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/buttonLayout" />
 
 </RelativeLayout>

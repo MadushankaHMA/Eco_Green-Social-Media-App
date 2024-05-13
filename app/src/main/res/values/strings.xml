@@ -7,5 +7,9 @@
     <string name="posts">Posts</string>
     <string name="add_description">Add description</string>
     <string name="eco_green">Eco Green</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="textview01">TextView</string>
+    <string name="todo01">TODO</string>
 
 </resources>

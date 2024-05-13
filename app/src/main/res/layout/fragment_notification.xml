@@ -32,7 +32,8 @@
              android:layout_weight="1"
              android:layout_marginStart="5dp"
              android:layout_marginEnd="5dp"
-             android:text="Friend Recommendations" />
+             android:text="Friend Recommendations"
+             style="?android:attr/buttonBarButtonStyle" />
 
          <Button
              android:id="@+id/postRecommendationsButton"
@@ -41,7 +42,8 @@
              android:layout_weight="1"
              android:layout_marginStart="5dp"
              android:layout_marginEnd="5dp"
-             android:text="Post Recommendations" />
+             android:text="Post Recommendations"
+             style="?android:attr/buttonBarButtonStyle" />
    </LinearLayout>
 
    <androidx.recyclerview.widget.RecyclerView

@@ -8,4 +8,8 @@
     <string name="add_description">Add description</string>
     <string name="eco_green">Eco Green</string>
 
+    <string name="back_button_text">Navigate back</string>
+    <string name="gallery_button_text">Open gallery</string>
+    <string name="camera_button_text">Open camera</string>
+
 </resources>

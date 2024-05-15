@@ -198,7 +198,7 @@ public class LoginFragment extends Fragment {
             }
         }
     }
-
+    //sync with google auth
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         auth.signInWithCredential(credential)

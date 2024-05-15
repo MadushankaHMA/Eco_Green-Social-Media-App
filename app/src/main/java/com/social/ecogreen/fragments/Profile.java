@@ -126,7 +126,7 @@ public class Profile extends Fragment {
             isMyProfile = true;
             userUID = user.getUid();
         }
-
+//edit button
         if (isMyProfile) {
             editProfileBtn.setVisibility(View.VISIBLE);
             followBtn.setVisibility(View.GONE);
@@ -577,6 +577,7 @@ public class Profile extends Fragment {
         adapter.stopListening();
     }
 
+//Crop image Activity
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

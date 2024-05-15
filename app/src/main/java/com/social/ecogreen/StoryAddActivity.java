@@ -26,7 +26,6 @@ import com.google.firebase.storage.StorageReference;
 import com.gowtham.library.utils.CompressOption;
 import com.gowtham.library.utils.TrimType;
 import com.gowtham.library.utils.TrimVideo;
-import com.social.ecogreen.R;
 import com.marsad.stylishdialogs.StylishAlertDialog;
 
 import java.io.File;

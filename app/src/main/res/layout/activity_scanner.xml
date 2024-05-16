@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/status_bar_height"
-        android:background="@color/status_bar_color"
+        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -18,7 +18,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/borderless_background"
             android:src="@drawable/ic_back_foreground"
             android:labelFor="@+id/back_text"
             android:contentDescription="@string/back_button_text"/>
@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
             android:text="Eco-Waste Recognition"
-            android:textColor="@color/status_bar_text_color"
+            android:textColor="@color/colorGreenMid"
             android:textSize="20sp"
             android:layout_marginTop="3dp"
             android:gravity="center_vertical"

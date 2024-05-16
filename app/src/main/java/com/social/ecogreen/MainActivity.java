@@ -17,8 +17,9 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.social.ecogreen.R;
 import com.social.ecogreen.adapter.ViewPagerAdapter;
+import com.social.ecogreen.fragments.LoginFragment;
+import com.social.ecogreen.fragments.Profile;
 import com.social.ecogreen.fragments.Search;
 
 import java.io.File;
@@ -29,7 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity implements Search.OnDataPass {
+public class MainActivity extends AppCompatActivity implements Profile.OnLogoutListener,Search.OnDataPass {
 
     public static String USER_ID;
     public static boolean IS_SEARCHED_USER = false;
@@ -219,6 +220,7 @@ public class MainActivity extends AppCompatActivity implements Search.OnDataPass
         super.onPause();
     }
 
+
     void updateStatus(boolean status) {
 
         Map<String, Object> map = new HashMap<>();
@@ -231,4 +233,10 @@ public class MainActivity extends AppCompatActivity implements Search.OnDataPass
     }
 
 
+    @Override
+    public void onLogout() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, new LoginFragment())  // Replace with your fragment container ID
+                .commit();
+    }
 }

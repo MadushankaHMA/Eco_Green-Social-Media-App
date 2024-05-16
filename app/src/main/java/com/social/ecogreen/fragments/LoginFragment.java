@@ -96,6 +96,7 @@ public class LoginFragment extends Fragment {
 
     private void clickListener() {
 
+
         forgotPasswordTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,6 +164,7 @@ public class LoginFragment extends Fragment {
         });
 
     }
+
 
     private void sendUserToMainActivity() {
 

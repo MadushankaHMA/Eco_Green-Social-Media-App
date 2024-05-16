@@ -41,8 +41,8 @@
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="107dp"
         android:background="@drawable/button_circle_background"
         android:contentDescription="@string/gallery_button_text"
         android:src="@drawable/ic_gallery_foreground" />
@@ -53,8 +53,8 @@
         android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="90dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginBottom="107dp"
         android:background="@drawable/button_circle_background"
         android:contentDescription="@string/camera_button_text"
         android:src="@drawable/ic_scanner_foreground" />
@@ -72,7 +72,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
         android:text="Classified as:"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -88,5 +90,19 @@
         android:textColor="#FFBF00"
         android:textSize="25sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="310dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="50dp"
+        android:text="POST"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorGreenMid"/>
 
 </RelativeLayout>

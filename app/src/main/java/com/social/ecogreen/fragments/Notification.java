@@ -1,9 +1,11 @@
 package com.social.ecogreen.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +19,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.social.ecogreen.PostRecommendationActivity;
 import com.social.ecogreen.R;
 import com.social.ecogreen.adapter.NotificationAdapter;
 import com.social.ecogreen.model.NotificationModel;
@@ -50,7 +53,18 @@ public class Notification extends Fragment {
         init(view);
 
         loadNotification();
+
+        //notification update
+        Button getRecommendationsButton = view.findViewById(R.id.getRecommendationsButton);
+        getRecommendationsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), PostRecommendationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
     //notification update
     void init(View view) {
         recyclerView = view.findViewById(R.id.recyclerView);

@@ -41,14 +41,14 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
     @Override
     public void onBindViewHolder(@NonNull NotificationHolder holder, int position) {
 
+        holder.time.setText(calculateTime(list.get(position).getTime()));
         holder.notification.setText(list.get(position).getNotification());
-        holder.notification.setText(calculateTime(list.get(position).getTime()));
 
 
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    String calculateTime(Date date) {
+    private String calculateTime(Date date) {
         long millis = date.toInstant().toEpochMilli();
         return DateUtils.getRelativeTimeSpanString(millis, System.currentTimeMillis(), 60000, DateUtils.FORMAT_ABBREV_TIME).toString();
     }

@@ -202,7 +202,7 @@ public class Add extends Fragment {
 
                                 for (File file1 : files) {
 
-                                    if (file1.getAbsolutePath().endsWith(".jpg") || file1.getAbsolutePath().endsWith(".png")) {
+                                    if (file1.getAbsolutePath().endsWith(".jpg") || file1.getAbsolutePath().endsWith(".png") || file1.getAbsolutePath().endsWith(".jpeg")) {
 
                                         list.add(new GalleryImages(Uri.fromFile(file1)));
                                         adapter.notifyDataSetChanged();

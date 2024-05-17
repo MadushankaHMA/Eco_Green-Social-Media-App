@@ -30,6 +30,11 @@
             android:name="com.social.ecogreen.ViewStoryActivity"
             android:exported="true" />
         <activity android:name="com.social.ecogreen.StoryAddActivity" />
+
+        <activity
+            android:name="com.social.ecogreen.ScannerActivity"
+            android:exported="true" />
+
         <activity
             android:name="com.social.ecogreen.PostViewActivity"
             android:exported="true">

@@ -81,11 +81,12 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="wrap_content"
+        android:layout_width="83dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/classified"
-        android:layout_marginStart="170dp"
-        android:layout_marginTop="-26dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="51dp"
+        android:layout_toEndOf="@+id/classified"
         android:text=""
         android:textColor="#FFBF00"
         android:textSize="25sp"
@@ -98,11 +99,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="310dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="57dp"
         android:text="POST"
+        android:textColor="@color/colorGreenMid"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorGreenMid"/>
+        android:textStyle="bold" />
 
 </RelativeLayout>

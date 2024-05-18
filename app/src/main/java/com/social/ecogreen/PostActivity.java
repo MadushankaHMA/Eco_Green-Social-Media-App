@@ -31,7 +31,7 @@ public class PostActivity extends AppCompatActivity {
         classifiedTextView = findViewById(R.id.classifiedTextView);
         locationTextView = findViewById(R.id.locationTextView);
         quantityTextView = findViewById(R.id.quantityTextView);
-        timePeriodTextView = findViewById(R.id.timePeriodTextView);
+        /*timePeriodTextView = findViewById(R.id.timePeriodTextView);*/
         priceTextView = findViewById(R.id.priceTextView);
         postTextView = findViewById(R.id.postTextView);
 
@@ -56,11 +56,11 @@ public class PostActivity extends AppCompatActivity {
     private void postToFirebase() {
         String location = locationTextView.getText().toString();
         String quantity = quantityTextView.getText().toString();
-        String timePeriod = timePeriodTextView.getText().toString();
+        /*String timePeriod = timePeriodTextView.getText().toString();*/
         String price = priceTextView.getText().toString();
         String classifiedResult = classifiedTextView.getText().toString();
 
-        if (location.isEmpty() || quantity.isEmpty() || timePeriod.isEmpty() || price.isEmpty()) {
+        if (location.isEmpty() || quantity.isEmpty() || price.isEmpty()) {
             Toast.makeText(this, "Please fill all the details", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -76,7 +76,7 @@ public class PostActivity extends AppCompatActivity {
         Map<String, Object> postMap = new HashMap<>();
         postMap.put("location", location);
         postMap.put("quantity", quantity);
-        postMap.put("timePeriod", timePeriod);
+        /*postMap.put("timePeriod", timePeriod);*/
         postMap.put("price", price);
         postMap.put("classifiedResult", classifiedResult);
         postMap.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());

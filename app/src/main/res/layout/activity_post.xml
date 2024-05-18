@@ -20,15 +20,18 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="15dp"
-            android:background="@drawable/borderless_background"
-            android:contentDescription="@string/back_button_text"
-            android:labelFor="@+id/back_text"
-            android:src="@drawable/ic_back_foreground" />
+        <TextView
+            android:layout_width="411dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:text="Sell Now"
+            android:textColor="@color/colorGreenMid"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="60dp"/>
+
     </LinearLayout>
 
     <ImageView
@@ -41,29 +44,32 @@
 
     <!-- Additional Details -->
 
-    <EditText
-        android:id="@+id/quantityTextView"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_below="@id/locationTextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="-5dp"
-        android:layout_marginEnd="-1dp"
-        android:hint="Enter Quantity" />
-
+    <!--
     <EditText
         android:id="@+id/priceTextView"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
         android:layout_below="@id/timePeriodTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="-8dp"
-        android:layout_marginEnd="-1dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="1dp"
         android:hint="Enter Price" />
+-->
+
+    <!--    <ImageButton
+        android:id="@+id/Scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="54dp"
+            android:layout_marginBottom="12dp"
+        android:layout_marginRight="143dp"
+        android:background="@drawable/spi"
+        android:contentDescription="@null" />-->
+
 
     <TextView
         android:id="@+id/classifiedTextView"
@@ -72,62 +78,130 @@
         android:layout_below="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="194dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="103dp"
         android:text="Classified as:"
+        android:textColor="@color/colorGreenMid"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/locationTextView"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_below="@id/classifiedTextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="-1dp"
-        android:hint="Enter Location" />
-
-    <EditText
-        android:id="@+id/timePeriodTextView"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_below="@id/quantityTextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="-4dp"
-        android:layout_marginEnd="1dp"
-        android:hint="Enter Time Period" />
-
-    <TextView
-        android:id="@+id/postTextView"
-        android:layout_width="91dp"
-        android:layout_height="44dp"
+    <!--    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="277dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/quantityTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="176dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="87dp"
-        android:textStyle="bold"
-        android:text="POST" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="172dp"
+        android:text="Price :"
+        android:textSize="18dp" />-->
+
+    <EditText
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_below="@id/quantityTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="-1dp"
+        android:hint="Enter Price" />
+
+    <EditText
+        android:id="@+id/locationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_below="@id/classifiedTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="1dp"
+        android:hint="Enter Location" />
 
     <!--    <TextView
-            android:id="@+id/postTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_below="@id/priceTextView"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="26dp"
-            android:layout_marginBottom="94dp"
-            android:text="POST"
-            android:textColor="@color/colorGreenMid"
-            android:textSize="30dp"
-            android:textStyle="bold" />-->
+        android:id="@+id/textView2"
+        android:layout_width="277dp"
+        android:layout_height="23dp"
+        android:layout_below="@+id/locationTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="261dp"
+        android:text="Quantity :"
+        android:textSize="18dp" />-->
+
+    <EditText
+        android:id="@+id/quantityTextView"
+        android:layout_width="381dp"
+        android:layout_height="66dp"
+        android:layout_below="@id/locationTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:hint="Enter Quantity" />
+
+    <TextView
+        android:id="@+id/postTextView"
+        android:layout_width="145dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/priceTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginBottom="94dp"
+        android:text="POST"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="344dp"
+        android:text="Deliveray Location :"
+        android:textSize="18dp" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/borderless_background"
+        android:contentDescription="@string/back_button_text"
+        android:labelFor="@+id/back_text"
+        android:src="@drawable/ic_back_foreground" />
+
+<!--    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="386dp"
+        app:srcCompat="@drawable/spi" />-->
 
 
 </RelativeLayout>

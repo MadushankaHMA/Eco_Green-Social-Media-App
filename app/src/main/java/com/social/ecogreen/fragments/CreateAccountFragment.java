@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.social.ecogreen.QuestionnaireActivity;
 import com.social.ecogreen.R;
 import com.social.ecogreen.MainActivity;
 import com.social.ecogreen.ReplacerActivity;
@@ -192,7 +193,15 @@ public class CreateAccountFragment extends Fragment {
                         if (task.isSuccessful()) {
                             assert getActivity() != null;
                             progressBar.setVisibility(View.GONE);
-                            startActivity(new Intent(getActivity().getApplicationContext(), MainActivity.class));
+
+                            // Get the UID
+                            FirebaseUser Users = auth.getCurrentUser();
+                            String uid = Users.getUid();
+
+                            // Start QuestionnaireActivity and pass the UID
+                            Intent intent = new Intent(getActivity().getApplicationContext(), QuestionnaireActivity.class);
+                            intent.putExtra("uid", uid);
+                            startActivity(intent);
                             getActivity().finish();
 
                         } else {

@@ -57,10 +57,10 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.marsad.stylishdialogs.StylishAlertDialog;
 import com.social.ecogreen.R;
 import com.social.ecogreen.chat.ChatActivity;
 import com.social.ecogreen.model.PostImageModel;
-import com.marsad.stylishdialogs.StylishAlertDialog;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -74,6 +74,9 @@ import java.util.List;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
+//
+
 
 public class Profile extends Fragment {
 
@@ -90,8 +93,11 @@ public class Profile extends Fragment {
     private RecyclerView recyclerView;
     private LinearLayout countLayout;
     private FirebaseUser user;
-    private ImageButton editProfileBtn;
+    private ImageButton editProfileBtn, sendBtn;
 
+    private FirebaseAuth auth;
+
+    private OnLogoutListener logoutListener;
 
     public Profile() {
         // Required empty public constructor
@@ -100,14 +106,43 @@ public class Profile extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        auth = FirebaseAuth.getInstance();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false);
+
+    }
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof OnLogoutListener) {
+            logoutListener = (OnLogoutListener) context;
+        } else {
+            throw new RuntimeException(context.toString() + " must implement OnLogoutListener");
+        }
+    }
+
+    private void logout() {
+        if (auth != null && auth.getCurrentUser() != null) {
+            auth.signOut();
+            if (logoutListener != null) {
+                logoutListener.onLogout();
+            }
+        } else {
+            Log.e("Profile Fragment", "User is not logged in.");
+        }
     }
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        // Correctly find the sendBtn (ImageButton)
+        sendBtn = view.findViewById(R.id.sendBtn);
+
+        // Set the click listener
+        sendBtn.setOnClickListener(v -> logout());
+
 
         init(view);
 
@@ -126,7 +161,7 @@ public class Profile extends Fragment {
             isMyProfile = true;
             userUID = user.getUid();
         }
-
+//edit button
         if (isMyProfile) {
             editProfileBtn.setVisibility(View.VISIBLE);
             followBtn.setVisibility(View.GONE);
@@ -151,6 +186,7 @@ public class Profile extends Fragment {
         recyclerView.setAdapter(adapter);
 
         clickListener();
+
 
     }
 
@@ -386,7 +422,9 @@ public class Profile extends Fragment {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
+
     }
+
 
     @SuppressLint("SetTextI18n")
     private void loadBasicData() {
@@ -577,6 +615,7 @@ public class Profile extends Fragment {
         adapter.stopListening();
     }
 
+//Crop image Activity
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -672,6 +711,10 @@ public class Profile extends Fragment {
 
         }
 
+    }
+
+    public interface OnLogoutListener {
+        void onLogout();
     }
 
 }

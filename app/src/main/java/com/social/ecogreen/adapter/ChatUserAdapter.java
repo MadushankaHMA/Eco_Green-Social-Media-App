@@ -44,7 +44,6 @@ public class ChatUserAdapter extends RecyclerView.Adapter<ChatUserAdapter.ChatUs
         return new ChatUserHolder(view);
     }
 
-
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull ChatUserHolder holder, int position) {

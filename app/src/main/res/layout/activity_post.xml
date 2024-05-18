@@ -165,7 +165,7 @@
         android:layout_marginEnd="122dp"
         android:layout_marginBottom="94dp"
         android:text="POST"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -179,7 +179,7 @@
         android:layout_marginEnd="198dp"
         android:layout_marginBottom="344dp"
         android:text="Deliveray Location :"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
     <ImageButton
         android:id="@+id/back_button"

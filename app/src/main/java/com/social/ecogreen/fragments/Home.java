@@ -52,7 +52,7 @@ public class Home extends Fragment {
     private FirebaseUser user;
     Activity activity;
 
-    private ImageButton spi;
+    private ImageButton Scanner;
 
     public Home() {
         // Required empty public constructor
@@ -135,6 +135,11 @@ public class Home extends Fragment {
 
         // Find the button or image view by ID
         // Set OnClickListener to start ScannerActivity
+        /*view.findViewById(R.id.Scanner).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ScannerActivity.class);
+            startActivity(intent);
+        });*/
+
         view.findViewById(R.id.Scanner).setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), ScannerActivity.class);
             startActivity(intent);

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.social.ecogreen.R;
+import com.social.ecogreen.ScannerActivity;
 import com.social.ecogreen.adapter.HomeAdapter;
 import com.social.ecogreen.adapter.StoriesAdapter;
 import com.social.ecogreen.chat.ChatUsersActivity;
@@ -49,6 +51,8 @@ public class Home extends Fragment {
     private List<HomeModel> list;
     private FirebaseUser user;
     Activity activity;
+
+    private ImageButton Scanner;
 
     public Home() {
         // Required empty public constructor
@@ -129,7 +133,22 @@ public class Home extends Fragment {
 
         });
 
+        // Find the button or image view by ID
+        // Set OnClickListener to start ScannerActivity
+        /*view.findViewById(R.id.Scanner).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ScannerActivity.class);
+            startActivity(intent);
+        });*/
+
+        view.findViewById(R.id.Scanner).setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ScannerActivity.class);
+            startActivity(intent);
+        });
+
     }
+
+
+
 
     private void init(View view) {
 

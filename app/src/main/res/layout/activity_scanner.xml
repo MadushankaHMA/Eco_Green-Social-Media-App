@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/borderless_background"
+            android:src="@drawable/ic_back_foreground"
+            android:labelFor="@+id/back_text"
+            android:contentDescription="@string/back_button_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:text="Eco-Waste Recognition"
+            android:textColor="@color/colorGreenMid"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="350sp"
+        android:layout_height="350sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp" />
+
+    <TextView
+        android:id="@+id/classified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Classified as:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/classified"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="-28dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="236dp"
+        android:layout_toEndOf="@+id/classified"
+        android:text=""
+        android:textColor="#FFBF00"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="72dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="95dp"
+        android:gravity="center_vertical"
+        android:text="POST"
+        android:textColor="@color/colorGreenMid"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/button_circle_background"
+        android:contentDescription="@string/camera_button_text"
+        android:src="@drawable/ic_scanner_foreground" />
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/button_circle_background"
+        android:contentDescription="@string/gallery_button_text"
+        android:src="@drawable/ic_gallery_foreground" />
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-/*
+
 package com.social.ecogreen;
 
 import androidx.activity.result.ActivityResult;
@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-*/
-/*import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;*//*
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 
 import android.Manifest;
@@ -89,14 +89,14 @@ public class ScannerActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(ScannerActivity.this);
         storageReference = FirebaseStorage.getInstance().getReference();
 
-        */
-/*Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);*//*
+
+        /*Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 
-        */
-/*progress = findViewById(R.id.progress);
-        imageView = findViewById(R.id.imageView);*//*
+
+        progress = findViewById(R.id.progress);*/
+        imageView = findViewById(R.id.imageView);
 
 
         ImageButton camera = findViewById(R.id.button);
@@ -251,9 +251,9 @@ public class ScannerActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-}*/
+}
 
-
+/*
 package com.social.ecogreen;
 
 import androidx.activity.result.ActivityResult;
@@ -285,6 +285,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FirebaseStorage;
@@ -313,6 +314,7 @@ public class ScannerActivity extends AppCompatActivity {
     private Uri image;
     private String classifiedResult;
     private Bitmap scannedImage;
+    MaterialButton selectImage, uploadImage;
 
     private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
         @Override
@@ -320,8 +322,10 @@ public class ScannerActivity extends AppCompatActivity {
             if (result.getResultCode() == RESULT_OK) {
                 if (result.getData() != null) {
                     image = result.getData().getData();
+                    //diff
+                    //uploadImage.setEnabled(true);
                     Glide.with(getApplicationContext()).load(image).into(imageView);
-                    try {
+                   try {
                         scannedImage = MediaStore.Images.Media.getBitmap(getContentResolver(), image);
                         scannedImage = Bitmap.createScaledBitmap(scannedImage, imageSize, imageSize, false);
                         classifyImage(scannedImage);
@@ -462,4 +466,4 @@ public class ScannerActivity extends AppCompatActivity {
             }
         }
     }
-}
+}*/

@@ -78,5 +78,8 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.picasso:picasso:2.8")
 
+    //Optimized Battery Usage Library added
+    implementation 'com.github.MadushankaHMA:Optimized-Battery-Usage-Library:7.0'
+
 
 }

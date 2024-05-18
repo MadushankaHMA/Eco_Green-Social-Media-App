@@ -11,6 +11,5 @@
     <string name="back_button_text">Navigate back</string>
     <string name="gallery_button_text">Open gallery</string>
     <string name="camera_button_text">Open camera</string>
-
-
+    <string name="add_img">Add Image</string>
 </resources>

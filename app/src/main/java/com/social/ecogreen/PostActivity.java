@@ -3,6 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Base64;
 import android.widget.ImageView;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -25,12 +28,12 @@ public class PostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post);
 
         imageView = findViewById(R.id.imageView);
-        classifiedTextView = findViewById(R.id.textView);
-/*        locationTextView = findViewById(R.id.location);
-        quantityTextView = findViewById(R.id.Qquantity);
-        timePeriodTextView = findViewById(R.id.time);
-        priceTextView = findViewById(R.id.pPrice);
-        postTextView = findViewById(R.id.post);*/
+        classifiedTextView = findViewById(R.id.classifiedTextView);
+        locationTextView = findViewById(R.id.locationTextView);
+        quantityTextView = findViewById(R.id.quantityTextView);
+        timePeriodTextView = findViewById(R.id.timePeriodTextView);
+        priceTextView = findViewById(R.id.priceTextView);
+        postTextView = findViewById(R.id.postTextView);
 
         Intent intent = getIntent();
         String imageString = intent.getStringExtra("image");
@@ -46,15 +49,11 @@ public class PostActivity extends AppCompatActivity {
             classifiedTextView.setText(classifiedResult);
         }
 
-        //postTextView.setOnClickListener(v -> postToFirebase());
+        postTextView.setOnClickListener(v -> postToFirebase());
     }
 
-   /* private Bitmap decodeImage(String encodedImage) {
-        byte[] decodedByte = Base64.decode(encodedImage, 0);
-        return BitmapFactory.decodeByteArray(decodedByte, 0, decodedByte.length);
-    }*/
 
-    /*private void postToFirebase() {
+    private void postToFirebase() {
         String location = locationTextView.getText().toString();
         String quantity = quantityTextView.getText().toString();
         String timePeriod = timePeriodTextView.getText().toString();
@@ -66,6 +65,14 @@ public class PostActivity extends AppCompatActivity {
             return;
         }
 
+        // Convert image to base64 string
+        BitmapDrawable drawable = (BitmapDrawable) imageView.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] imageData = baos.toByteArray();
+        String imageBase64 = Base64.encodeToString(imageData, Base64.DEFAULT);
+
         Map<String, Object> postMap = new HashMap<>();
         postMap.put("location", location);
         postMap.put("quantity", quantity);
@@ -73,6 +80,7 @@ public class PostActivity extends AppCompatActivity {
         postMap.put("price", price);
         postMap.put("classifiedResult", classifiedResult);
         postMap.put("userId", FirebaseAuth.getInstance().getCurrentUser().getUid());
+        postMap.put("image", imageBase64); // Add image data to the map
 
         FirebaseFirestore.getInstance().collection("posts").add(postMap)
                 .addOnSuccessListener(documentReference -> {
@@ -80,5 +88,5 @@ public class PostActivity extends AppCompatActivity {
                     finish();
                 })
                 .addOnFailureListener(e -> Toast.makeText(this, "Failed to create post", Toast.LENGTH_SHORT).show());
-    }*/
+    }
 }

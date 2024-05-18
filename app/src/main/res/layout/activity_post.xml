@@ -4,12 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".PostActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/status_bar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
         android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal">
@@ -23,47 +29,105 @@
             android:contentDescription="@string/back_button_text"
             android:labelFor="@+id/back_text"
             android:src="@drawable/ic_back_foreground" />
-
-
     </LinearLayout>
-
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="260sp"
-        android:layout_height="260sp"
+        android:layout_width="240sp"
+        android:layout_height="240sp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="416dp" />
+        android:layout_marginTop="55dp" />
 
+    <!-- Additional Details -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="90dp"
-        android:layout_height="36dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="403dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="291dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
+    <EditText
+        android:id="@+id/quantityTextView"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_below="@id/locationTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="-1dp"
+        android:hint="Enter Quantity" />
+
+    <EditText
+        android:id="@+id/priceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_below="@id/timePeriodTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="-1dp"
+        android:hint="Enter Price" />
+
+    <TextView
+        android:id="@+id/classifiedTextView"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="194dp"
+        android:text="Classified as:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/locationTextView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/classifiedTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-1dp"
+        android:hint="Enter Location" />
+
+    <EditText
+        android:id="@+id/timePeriodTextView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/quantityTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="1dp"
+        android:hint="Enter Time Period" />
+
+    <TextView
+        android:id="@+id/postTextView"
+        android:layout_width="91dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="279dp"
-        android:layout_marginBottom="294dp"
-        android:text="Classified as: "/>
+        android:layout_marginStart="176dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="87dp"
+        android:textStyle="bold"
+        android:text="POST" />
+
+    <!--    <TextView
+            android:id="@+id/postTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/priceTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="94dp"
+            android:text="POST"
+            android:textColor="@color/colorGreenMid"
+            android:textSize="30dp"
+            android:textStyle="bold" />-->
 
 
 </RelativeLayout>

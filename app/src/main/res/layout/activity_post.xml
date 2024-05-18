@@ -111,7 +111,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="-1dp"
         android:layout_marginEnd="-1dp"
-        android:hint="Enter Price" />
+        android:hint="Enter Price in Rupees" />
 
     <EditText
         android:id="@+id/locationTextView"
@@ -150,7 +150,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="0dp"
-        android:hint="Enter Quantity" />
+        android:hint="Enter Quantity in Kilogram" />
 
     <TextView
         android:id="@+id/postTextView"

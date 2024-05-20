@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,9 +14,19 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="78dp"
         android:text="Login"
-        android:textColor="@color/colorGreen"
-        android:textSize="24sp"
+        android:textColor="@color/forestGreen"
+        android:textSize="30sp"
         android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="179dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="421dp"
+        android:src="@drawable/app_icon" />
 
     <LinearLayout
         android:id="@+id/ll1"
@@ -40,6 +51,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/text_box"
             android:hint="Password"
+            android:inputType="textPassword"
             android:padding="12dp" />
 
         <TextView
@@ -99,5 +111,7 @@
         android:text="Create Account, Sign Up"
         android:textColor="@color/colorGreen"
         android:textStyle="bold" />
+
+
 
 </RelativeLayout>

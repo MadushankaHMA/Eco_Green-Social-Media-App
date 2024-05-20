@@ -20,3 +20,5 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -keep class androidx.appcompat.widget.** { *; }
+-keep class com.google.android.exoplayer2.** { *; }
+-keep interface com.google.android.exoplayer2.** { *; }

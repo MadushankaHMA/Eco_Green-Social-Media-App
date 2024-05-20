@@ -4,17 +4,33 @@
     android:layout_height="match_parent"
     tools:context="com.social.ecogreen.fragments.Notification">
 
-   <Button
-       android:id="@+id/getRecommendationsButton"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-       android:text="Get Recommendations" />
-
-   <androidx.recyclerview.widget.RecyclerView
+   <LinearLayout
+       android:id="@+id/buttonLayout"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:padding="16dp">
+
+      <Button
+          android:id="@+id/getRecommendationsButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Get Recommendations" />
+
+      <Button
+          android:id="@+id/suggestFriendsButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Suggest Friends" />
+   </LinearLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/recyclerView"
-       android:layout_below="@+id/getRecommendationsButton"/>
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/buttonLayout"/>
 
 </RelativeLayout>

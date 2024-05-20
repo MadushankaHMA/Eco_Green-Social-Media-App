@@ -36,7 +36,7 @@ public class QuestionnaireActivity extends AppCompatActivity {
 
         // Sample Data Arrays
         String[] spiTypes = {"1", "2", "3", "4", "5", "6"};
-        String[] cities = {"Colombo", "Gampaha", "Malambe", "Kandy", "Galle", "Homagama","Kiribathgoda" };
+        String[] cities = {"Colombo", "Gampaha", "Malambe", "Kandy", "Galle", "Homagama","Kiribathgoda", "Yakkala", "Maharagama", "Kadawatha", "Ragama", "Jafna", "Nugegoda"};
 
         // Adapters for Spinners
         ArrayAdapter<String> spiTypeAdapter = new ArrayAdapter<>(this,

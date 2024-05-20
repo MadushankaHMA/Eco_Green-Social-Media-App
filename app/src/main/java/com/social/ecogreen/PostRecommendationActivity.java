@@ -45,7 +45,7 @@ public class PostRecommendationActivity extends AppCompatActivity {
 
         //Retrofit setup - replace 'YOUR_FLASK_API_BASE_URL'
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.0.2.2:5003/")  // Replace with your actual API URL
+                .baseUrl("https://vflask-app-6a5a181334b9.herokuapp.com")  // Replace with your actual API URL
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -19,6 +19,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.social.ecogreen.FriendsActivity;
 import com.social.ecogreen.PostRecommendationActivity;
 import com.social.ecogreen.R;
 import com.social.ecogreen.adapter.NotificationAdapter;
@@ -63,6 +64,16 @@ public class Notification extends Fragment {
                 startActivity(intent);
             }
         });
+
+        // Get the Suggest Friends button
+        Button suggestFriendsButton = view.findViewById(R.id.suggestFriendsButton);
+
+        // Set click listener for the Suggest Friends button
+        suggestFriendsButton.setOnClickListener(v -> {
+            Intent friendsIntent = new Intent(getContext(), FriendsActivity.class);
+            startActivity(friendsIntent);
+        });
+
     }
 
     //notification update
